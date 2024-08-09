@@ -1,0 +1,48 @@
+// GLOBAL
+
+.container {
+  width: 480px;
+  margin: auto;
+  padding: 0 15px;
+}
+.section {
+  width: 480px;
+  margin: auto;
+  padding: 60px 0;
+}
+
+// PORTFOLIO
+
+.filter-buttons {
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .container {
+    width: 768px; /* Maximul pentru tableta */
+  }
+  .section {
+    width: 768px; /* Maximul pentru tableta */
+  }
+
+  // PORTFOLIO
+
+  .filter-buttons {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .container {
+    width: 1200px; /* Maximul pentru desktop */
+  }
+  .section {
+    width: 1600px; /* Maximul pentru desktop */
+    padding: 94px 0;
+  }
+  // PORTFOLIO
+
+  .filter-buttons {
+    margin-bottom: 50px;
+  }
+}

@@ -1,0 +1,41 @@
+// CONTACT & PHONE LINKS (FROM HEADER NAV)
+
+.contact__mail {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--second-section-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: var(--link-active-color);
+    outline: 0;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.contact__phone {
+  position: relative;
+  display: flex;
+  color: var(--second-section-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  outline: 0;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: var(--link-active-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
