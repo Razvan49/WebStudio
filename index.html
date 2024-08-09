@@ -14,6 +14,18 @@
     <link rel="stylesheet" href="./css/main.min.css" />
     <!-- TITLE | Acest text o sa aparata in bara de sus a browserului (TAB) -->
     <title>Web Studio Homework Project</title>
+    <script src="/js/index.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "x2q9lEl4MppFqxE_t",
+        });
+      })();
+    </script>
   </head>
   <!-- BODY | este partea pe care o vedem noi intr-o pagina web -->
   <body>
@@ -465,15 +477,17 @@
         <button class="close-btn" data-modal-close>&times;</button>
         <div class="modal-content">
           <h3>Leave your information and we'll call you back</h3>
-          <form name="forms" validate>
+          <form id="form" name="forms" validate>
             <label class="forms__label">
               <span class="forms__title">Name</span>
               <input
+                id="name"
                 class="forms__input"
                 type="name"
                 name="name"
+                pattern="^[A-Za-z\s]+$"
+                title="Trebuie să conțină doar litere."
                 required
-                pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
               />
               <svg class="forms__icon">
                 <use href="./images/symbol-defs.svg#icon-name-form"></use>
@@ -482,10 +496,12 @@
             <label class="forms__label">
               <span class="forms__title">Telephone</span>
               <input
+                id="telephone"
                 class="forms__input"
                 type="tel"
                 name="tel"
-                pattern="[0-9]{4} [0-9]{3} [0-9]{3}"
+                pattern="^\d+$"
+                title="Trebuie să conțină doar cifre."
                 required
               />
               <svg class="forms__icon">
@@ -494,7 +510,14 @@
             </label>
             <label class="forms__label">
               <span class="forms__title">E-mail</span>
-              <input class="forms__input" type="email" name="email" required />
+              <input
+                id="email"
+                class="forms__input"
+                type="email"
+                name="email"
+                title="Trebuie să conțină doar o adresă de email valabilă."
+                required
+              />
               <svg class="forms__icon">
                 <use href="./images/symbol-defs.svg#icon-email-form"></use>
               </svg>
@@ -502,6 +525,7 @@
             <label class="forms__label">
               <span class="forms__title">Comments</span>
               <textarea
+                id="message"
                 class="forms__textarea"
                 name="Comments"
                 cols="30"
@@ -520,7 +544,7 @@
               <a class="checkbox__terms" href="Terms and Conditions">Terms and Conditions</a>
             </label>
             <div class="button-container">
-              <button class="send-button" type="submit">Send</button>
+              <button type="submit" class="send-button">Send</button>
             </div>
           </form>
         </div>
